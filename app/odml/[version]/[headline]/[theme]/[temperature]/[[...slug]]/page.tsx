@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import Formv1 from "@/app/odml/[version]/v1";
-import SplashScreenOro from "@/app/components/SplashScreen/SplashScreenOro";
+import SplashScreen from "@/app/components/SplashScreen/SplashScreen";
 
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
 
 
   return (
-    <SplashScreenOro>
+    <SplashScreen>
       <Formv1 />
-    </SplashScreenOro>
+    </SplashScreen>
   );
 }

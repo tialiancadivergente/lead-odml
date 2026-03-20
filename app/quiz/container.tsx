@@ -70,17 +70,17 @@ export default function ContainerQuest({
   return (
     <div>
       <section
-        className={`relative flex items-center justify-center overflow-hidden h-full dark:bg-[url('/images/v21/bg_leadscore.webp')] light:bg-[url('/images/oro/splashScreen.webp')] bg-cover bg-center`}
+        className={`relative flex items-center justify-center overflow-hidden h-full dark:bg-[url('/images/odml/v1/bg-obrigado.webp')] light:bg-[url('/images/odml/v1/bg-obrigado.webp')] bg-cover bg-center`}
       >
         <div className="container mx-auto relative h-full px-4">
           <div className="flex flex-col items-center justify-center text-center py-8">
             <div className="w-full max-w-4xl mx-auto">
               <div className="mb-6 md:mb-8 flex justify-center">
                 <Image
-                  src={theme === "1" ? "/images/v21/logo_o_resgate_dos_otimistas.webp" : "/images/logo-o-resgate-dos-otimistas.png"}
-                  alt="Logotipo Resgate dos otimistas"
-                  width={424}
-                  height={164}
+                  src={"/images/odml/v1/o_despertar_da_mulher_livre.png"}
+                  alt="Logotipo O Despertar da Mulher Livre"
+                  width={487}
+                  height={178}
                   priority
                   className="object-contain select-none pointer-events-none h-auto"
                   style={{
@@ -91,25 +91,25 @@ export default function ContainerQuest({
               </div>
 
               <h1
-                className={`text-2xl md:text-5xl font-bold dark:text-custom-primary-gold -mt-4 mb-1 md:mb-2 text-center light:text-[#006D71]`}
+                className={`text-2xl md:text-5xl font-bold text-[#00171a] -mt-4 mb-1 md:mb-2 text-center light:text-[#006D71]`}
               >
                 FALTA APENAS UM PASSO
               </h1>
               <h2
-                className={`text-2xl md:text-5xl font-bold dark:text-custom-primary-gold mb-4 md:mb-7 text-center light:text-[#006D71]`}
+                className={`text-2xl md:text-5xl font-bold text-[#00171a] mb-4 md:mb-7 text-center light:text-[#006D71]`}
               >
                 PARA GARANTIR SUA VAGA!
               </h2>
 
               <p
-                className="dark:text-[#fff] light:text-[#07242C] text-base md:text-lg mb-5 md:mb-7 text-center"
+                className="text-[#003539] text-base md:text-lg mb-5 md:mb-7 text-center"
                 style={{ fontFamily: '"Roboto", Sans-serif' }}
               >
                 Para concluir sua inscrição, responda:
               </p>
 
               <div className="w-full max-w-2xl mx-auto">
-                <div className="bg-zinc-900 rounded-lg border border-white p-4 md:p-7 mb-6 md:mb-8 ">
+                <div className="bg-[#163235]/60 rounded-lg border border-[#163235]/80 p-4 md:p-7 mb-6 md:mb-8 ">
                   {isFetchingQuestions && (
                     <div className="text-white text-center py-8">
                       Carregando perguntas...
@@ -144,7 +144,7 @@ export default function ContainerQuest({
                       <div className="mb-4">
                         <div className="w-full bg-white/20 rounded-full h-2">
                           <div
-                            className="bg-teal-500 h-2 rounded-full transition-all duration-300"
+                            className="bg-[#e1c473] h-2 rounded-full transition-all duration-300"
                             style={{ width: `${progress}%` }}
                           />
                         </div>
@@ -209,7 +209,7 @@ export default function ContainerQuest({
                           <Button
                             variant="outline"
                             onClick={handleBack}
-                            className="bg-transparent border-gray-700 text-white hover:bg-gray-800 py-3 md:py-5 text-sm md:text-base"
+                            className="bg-white/90 text-black hover:bg-white/70 py-3 md:py-5 text-sm md:text-base"
                             style={{ fontFamily: '"Roboto", Sans-serif' }}
                           >
                             VOLTAR
@@ -220,7 +220,7 @@ export default function ContainerQuest({
                         <Button
                           onClick={handleNext}
                           disabled={!isCurrentQuestionAnswered || isSubmittingAnswers}
-                          className={`bg-teal-600 hover:bg-teal-700 text-white py-3 md:py-5 text-sm md:text-base ${currentQuestion === 0 ? "col-span-2" : ""
+                          className={`bg-[#e1c473] hover:bg-[#f1dfab] text-black font-bold py-3 md:py-5 text-sm md:text-base ${currentQuestion === 0 ? "col-span-2" : ""
                             }`}
                           style={{ fontFamily: '"Roboto", Sans-serif' }}
                         >
@@ -230,7 +230,7 @@ export default function ContainerQuest({
                               : submitSuccess
                                 ? "ENVIADO"
                                 : "ENVIAR"
-                            : "PROXIMA"}
+                            : "PRÓXIMA"}
                         </Button>
                       </div>
                     </>
@@ -243,7 +243,7 @@ export default function ContainerQuest({
                   className="dark:text-white light:text-[#07242C] text-xs md:text-sm mb-4 md:mb-5"
                   style={{ fontFamily: '"Roboto", Sans-serif' }}
                 >
-                  Apos responder as questoes, toque no botao abaixo
+                  Após responder as questões, toque no botão abaixo
                   <br className="hidden md:block" />
                   para receber o link e materiais do evento:
                 </p>
@@ -257,20 +257,33 @@ export default function ContainerQuest({
                     fontFamily: '"Roboto", Sans-serif',
                   }}
                 >
-                  Clique aqui para entrar no Grupo no WhatsApp
+                  Entrar no Grupo
                 </Button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <footer className="w-full bg-black h-[150px] flex items-center justify-center">
-        <p
-          className="text-gray-400 text-sm md:text-base text-center"
-          style={{ color: "#fff", fontFamily: '"Roboto", Sans-serif' }}
-        >
-          © 2023. All rights reserved. Politica de Privacidade.
-        </p>
+      <footer className="w-full bg-[#00171a] h-[150px]">
+        <div className="container mx-auto h-full px-4 flex items-center justify-between">
+          <p
+            className="text-white text-sm text-center md:text-left font-mulish"
+          >
+            Copyright © O Resgate Dos Otimistas. <br />Todos os direitos reservados.
+          </p>
+          <Image
+            src={"/images/logo.png"}
+            alt="Logotipo O Resgate Dos Otimistas"
+            width={250}
+            height={32}
+            priority
+            className="object-contain select-none pointer-events-none h-auto"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
+          />
+        </div>
       </footer>
     </div>
   );
