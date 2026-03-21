@@ -44,9 +44,8 @@ const mulish = Mulish({
 })
 
 export const metadata: Metadata = {
-  title: "O Resgate dos Otimistas - Diagnóstico de Dependência Emocional",
-  description:
-    "Faça seu diagnóstico de dependência emocional gratuito e descubra como aumentar seu nível de permissão.",
+  title: "O Despertar da Mulher Livre",
+  description: "E o caminho para se tornar uma MULHER LIVRE prosperar, construir uma vida estável e ter um relacionamento saudável, sem carregar o mundo nas costas.",
   icons: {
     icon: '/images/cropped-Alianca-Divergente-Logotipo-Favicon-32x32.png',
     shortcut: '/images/cropped-Alianca-Divergente-Logotipo-Favicon-32x32.png',
