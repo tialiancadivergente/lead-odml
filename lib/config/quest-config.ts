@@ -1,5 +1,5 @@
 export const DEFAULT_QUEST_FORM_VERSION_ID =
-  "2f76bc57-57a2-41fd-9c2c-18a726dd4fe0";
+  "6ae28205-2f33-4ddc-acba-26cf4f4321d3";
 
 const QUEST_WHATSAPP_URL_BY_TEMPERATURE = {
   f: "https://redirects.aliancadivergente.com.br/grupovip",
