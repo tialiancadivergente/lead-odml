@@ -34,14 +34,13 @@ export const Headline: IHeadline[] = [
     isPicture: false,
     isLogo: true,
     title: (
-      <p className="uppercase font-spectral text-[#D3CAC0] font-extrabold">
-        Em apenas 1 dia, descubra
-        <br className="hidden md:block" />
-        como seus relacionamentos
-        <br className="hidden md:block" />
-        estão travando sua vida
-        <br className="hidden md:block" />
-        financeira...
+      <p className="uppercase font-spectral text-[#D3CAC0] font-extrabold leading-tight tracking-normal">
+        Em apenas 1 dia,{" "}
+        descubra{" "}
+        <span className="whitespace-nowrap">
+          como seus relacionamentos
+        </span>{" "}
+        estão travando sua vida financeira...
       </p>
     ),
     text: subHeadline,
@@ -52,10 +51,11 @@ export const Headline: IHeadline[] = [
     isPicture: false,
     isLogo: true,
     title: (
-      <p className="uppercase font-spectral text-[#D3CAC0] font-extrabold">
-        Aprenda a identificar os relacionamentos
-        <br className="hidden md:block" />
-        que estão limitando sua conta bancária.
+      <p className="uppercase font-spectral text-[#D3CAC0] font-extrabold leading-tight tracking-normal">
+        Aprenda a identificar os{" "}
+        relacionamentos que estão{" "}
+        limitando sua conta{" "}
+        bancária.
       </p>
     ),
     text: subHeadline,
@@ -66,13 +66,10 @@ export const Headline: IHeadline[] = [
     isPicture: false,
     isLogo: true,
     title: (
-      <p className="uppercase font-spectral text-[#D3CAC0] font-extrabold">
-        Identifique e rompa os
-        <br className="hidden md:block" />
-        padrões que estão travando
-        <br className="hidden md:block" />
-        os seus relacionamentos
-        <br className="hidden md:block" />
+      <p className="uppercase font-spectral text-[#D3CAC0] font-extrabold leading-tight tracking-normal">
+        Identifique e rompa os{" "}
+        padrões que estão travando{" "}
+        os seus relacionamentos{" "}
         e a sua vida financeira.
       </p>
     ),
