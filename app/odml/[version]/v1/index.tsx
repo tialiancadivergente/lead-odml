@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { useState, useEffect } from "react";
@@ -15,9 +15,11 @@ import {
   type NormalizedTemperature,
 } from "@/lib/temperature-utils";
 import { useCreateLeadCapture } from "@/app/modules/lead-capture/hook/use-create-lead-capture";
+import { usePaginaWordpressAliancaWebhook } from "@/app/modules/lead-capture/hook/use-pagina-wordpress-alianca-webhook";
 import type {
   LeadRegistrationPayload,
 } from "@/app/modules/lead-capture/lead-capture.model";
+import { buildPaginaWordpressAliancaPayload } from "@/lib/webhooks/pagina-wordpress-alianca";
 import ContainerTeste from "./container";
 import { Headline } from "./headline";
 
@@ -39,6 +41,7 @@ export default function Formv1() {
   const { launch, season, tag_id } = LEAD_TRACK_CONFIG;
 
   const mutationCreate = useCreateLeadCapture();
+  const mutationPaginaWordpress = usePaginaWordpressAliancaWebhook();
 
   // ************* INICIO - CODIGO LEGADO ************* 
   // Capturar UTMs da queryString
@@ -182,6 +185,19 @@ export default function Formv1() {
       if (!requestId) {
         throw new Error("requestId nao retornado na resposta.");
       }
+
+      const paginaWordpressPayload = buildPaginaWordpressAliancaPayload({
+        launch,
+        season,
+        temperatura,
+        lead: {
+          phone: data.normalizedPhone,
+          email: data.email,
+        },
+        getUtmValue,
+      });
+
+      await mutationPaginaWordpress.mutateAsync(paginaWordpressPayload);
 
       window.location.href = `/quiz/?temperature=${temperatura}&requestId=${encodeURIComponent(
         requestId
