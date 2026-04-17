@@ -21,7 +21,7 @@ export default function Footer() {
                 
                 <div className="font-normal font-raleway text-[14px] text-white hidden lg:block">
                     <p>
-                        Copyright © O Resgate Dos Otimistas.
+                        Copyright © O Despertar da Mulher Livre.
                     </p>
                     <p>
                         Todos os direitos reservados.
@@ -29,17 +29,17 @@ export default function Footer() {
                 </div>
 
                 <Image
-                    src="/images//v21/logo-alianca-divergente.png"
+                    src="/images/odml/v1/logo-alianca.png"
                     alt="Logomarca Aliança Divergente"
                     width={165}
                     height={32}
                     priority
-                    className="object-contain md:w-[165px] w-[210px]" 
+                    className="object-contain md:w-[220px] w-[260px]" 
                 />
 
                 <div className="font-normal font-raleway text-[14px] text-white text-center lg:hidden block">
                     <p>
-                        Copyright © O Resgate Dos Otimistas.
+                        Copyright © O Despertar da Mulher Livre.
                     </p>
                     <p>
                         Todos os direitos reservados.
