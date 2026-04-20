@@ -22,8 +22,13 @@ const subHeadline = (
       <p>saudável, sem carregar o mundo nas costas.</p>
     </div>
 
-    <p className="mt-2 text-[#C0964B] font-bold">
-      Faça sua inscrição gratuita
+    <p className="mt-2 text-[#C0964B] font-bold md:hidden">
+      <span className="block">Terça-feira às 20h</span>
+      <span className="block">Faça sua inscrição gratuita</span>
+    </p>
+
+   <p className="mt-2 text-[#C0964B] font-bold hidden md:block">
+      Terça-feira às 20h <span className="mx-2">|</span> Faça sua inscrição gratuita
     </p>
   </div>
 );
